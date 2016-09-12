@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/isjia/md-live-reload/issues"
   },
-  "homepage": "https://github.com/isjia/md-live-reload#readme"
+  "homepage": "https://github.com/isjia/md-live-reload#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
