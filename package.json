@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/isjia/md-live-reload#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-markdown": "^1.2.0"
   }
 }
