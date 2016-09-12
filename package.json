@@ -1,0 +1,22 @@
+{
+  "name": "md-live-reload",
+  "version": "0.0.1",
+  "description": "Live reload markdown file with gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isjia/md-live-reload.git"
+  },
+  "keywords": [
+    "markdown"
+  ],
+  "author": "isjia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/isjia/md-live-reload/issues"
+  },
+  "homepage": "https://github.com/isjia/md-live-reload#readme"
+}
