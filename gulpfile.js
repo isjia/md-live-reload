@@ -1,14 +1,24 @@
 var gulp = require('gulp');
 var markdown = require('gulp-markdown');
+var wrap = require('gulp-wrap');
+var browserSync = require('browser-sync').create();
 
 gulp.task('markdown', function () {
-    return gulp.src('*.md')
+    return gulp.src('./note/*.md')
         .pipe(markdown())
-        .pipe(gulp.dest('dist'));
+        .pipe(wrap({src:"./src/layout/default.html"}))
+        .pipe(gulp.dest('./dist/note'));
 });
 
-gulp.task('watch', function(){
-  gulp.watch(['*.md'], ['markdown']);
+gulp.task('serve', ['markdown'], function(){
+  browserSync.init({
+    server: {
+      baseDir: './dist'
+    }
+  });
+
+  gulp.watch('./note/*.md', ['markdown']);
+  gulp.watch(['./dist/**/*.html']).on('change', browserSync.reload);
 });
 
-gulp.task('default', ['markdown', 'watch']);
+gulp.task('default', ['serve']);
